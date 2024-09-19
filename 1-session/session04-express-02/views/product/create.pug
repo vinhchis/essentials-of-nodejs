@@ -1,0 +1,18 @@
+extends ../layout.pug
+
+
+block content
+    title Product Form
+    .container
+      h1 Create Product
+      form(action='/product/create', method='POST', enctype='multipart/form-data')
+        .form-group
+          label(for='name') Name
+          input#name.form-control(type='text', name='name', required)
+        .form-group
+          label(for='price') Price
+          input#price.form-control(type='number', name='price', required, min='0', step='0.01')
+        .form-group
+          label(for='image') Image
+          input#image.form-control-file(type='file', name='image', required)
+        button.btn.btn-primary(type='submit') Create Product`

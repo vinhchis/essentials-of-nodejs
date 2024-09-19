@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+
+    form(action="/customers/search" method="GET")
+        input(type="text" name="q" placeholder="Search by name" aria-label="Search")
+        button(type="submit") Search
+    
+    br
+
+    table 
+        thread 
+            th Id 
+            th Name 
+            th Email 
+            th Phone
+            th Actions
+        tbody 
+            if customers != null && customers.length > 0
+                each item in customers 
+                    tr 
+                        td= item._id 
+                        td= item.name 
+                        td= item.email 
+                        td= item.phone
+                        td 
+                            a(href=`/customers/form-update/${item._id}`) EDIT
+                            | |
+                            a(href=`/customers/delete/${item._id}` onclick="return confirm('Are you sure to delete?')") DELETE
+            else 
+                tr 
+                    td(colspan='5') No Data

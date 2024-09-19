@@ -1,0 +1,27 @@
+extend ../layout
+block content
+    h2 Create A Famous People
+    div(id="fullNameError")
+    form(action="/peoples/form-create" method="POST" id="form-create")
+        label(for="fullName") Full Name:
+        input(type="text" id="fullName" name="fullName" required)
+        br
+        br
+
+        label(for="dob") Year of Birth:
+        input(type="number" id="dob" name="dob" required)
+        br
+        br
+
+        label(for="reputation") Achievements:
+        textarea(id="reputation" name="reputation" rows="4" cols="50" required) 
+        br
+        br
+
+        label(for="photo") Photo URL:
+        input(type="text" id="photo" name="photo" required)
+        br
+        br
+
+        div
+            button(type="submit") Create

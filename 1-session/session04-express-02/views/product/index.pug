@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content 
+    h3  
+        a(href='/product/create') Create New
+    h1 title 
+    form(action="/product/search", method="get")
+        label Name
+        input(type="text",  name="keyword", placeholder="Search by name")
+        input(type="submit", value="Search")
+    table
+        thead 
+            tr  
+                th Id 
+                th Name 
+                th Product 
+                th Image 
+            tbody 
+                if products!=null && products.length>0
+                    each item in product 
+                        tr 
+                            td= item._id 
+                            td= item.name 
+                            td= item.price 
+                            td= item.image 
+                else 
+                    tr  
+                        td(colspan="4") No Data

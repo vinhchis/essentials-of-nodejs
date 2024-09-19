@@ -1,0 +1,15 @@
+extend ../layout
+block content
+    h2 Create A Customer
+    form(action="/customers/form-create" method="POST")
+        div
+            label(for="") Name:
+            input(type="text" id="name" name="name" required)
+        div
+            label(for="") Email:
+            input(type="text" id="email" name="email" required)
+        div
+            label(for="") Phone:
+            input(type="text" id="phone" name="phone" required)
+        div
+            button(type="submit") Create

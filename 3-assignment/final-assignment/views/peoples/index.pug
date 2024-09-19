@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h2 
+        a(href="/peoples/create") Administrator
+    form(action="/peoples/search" method="GET")
+        input(type="text" name="q" placeholder="Enter brand name" aria-label="Search")
+        button(type="submit") Search
+    
+    br
+
+    h1 Biography Sites for Famous and Inspirational People
+    table 
+        thread 
+            th Full Name
+            th Date of Birth
+            th Reputation As 
+            th Function
+        tbody 
+            if peoples != null && peoples.length > 0
+                each item in peoples 
+                    tr 
+                        //- td= item._id 
+                        td= item.fullName 
+                        td= item.dob 
+                        td= item.reputation
+                        td 
+                            a(href=`/peoples/detail/${item._id}`) Details
+                           
+            else 
+                tr 
+                    td(colspan='4') No Data

@@ -1,0 +1,7 @@
+npm i pug gulp gulp-pug gulp-cli
+
+
+npm gulp pug 
+
+// Kiểm tra gulp version
+npx gulp --version

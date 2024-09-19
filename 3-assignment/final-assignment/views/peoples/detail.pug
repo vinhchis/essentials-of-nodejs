@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h1 Details of Famous and Inspirational People 
+    div     
+        div
+            img(src=`${people.photo}` alt="Image Description")
+        div 
+            div
+                div     
+                    p Full Name:
+                div
+                    p= people.fullName
+            div
+                div
+                    p Date of Birh:
+                div
+                    p= people.dob
+            div
+                div
+                    p Reputation As:
+                div
+                    p= people.reputation
+
+    div
+        a(href="/peoples/") Back to Index 

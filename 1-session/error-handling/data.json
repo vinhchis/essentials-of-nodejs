@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Alice Smith",
+    "age": 28,
+    "city": "Los Angeles",
+    "isStudent": true,
+    "grades": [95, 89, 97],
+    "address": {
+      "street": "456 Oak St",
+      "zipCode": "90001"
+    }
+  },
+  {
+    "name": "Bob Johnson",
+    "age": 35,
+    "city": "Chicago",
+    "isStudent": false,
+    "grades": [88, 92, 78],
+    "address": {
+      "street": "789 Pine St",
+      "zipCode": "60601"
+    }
+  },
+  {
+    "name": "Eva Davis",
+    "age": 22,
+    "city": "San Francisco",
+    "isStudent": true,
+    "grades": [75, 80, 88],
+    "address": {
+      "street": "101 Cedar St",
+      "zipCode": "94105"
+    }
+  },
+  {
+    "name": "David Wilson",
+    "age": 40,
+    "city": "Miami",
+    "isStudent": false,
+    "grades": [94, 85, 91],
+    "address": {
+      "street": "202 Maple St",
+      "zipCode": "33101"
+    }
+  },
+  {
+    "name": "Grace Lee",
+    "age": 25,
+    "city": "Seattle",
+    "isStudent": true,
+    "grades": [82, 79, 90],
+    "address": {
+      "street": "303 Birch St",
+      "zipCode": "98101"
+    }
+  }
+]
